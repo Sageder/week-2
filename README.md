@@ -168,4 +168,6 @@ In this run, Grok never used the easy bypass. The observed behavior was therefor
 
 > **Solve when the task is solvable; alert a human when legitimate completion is impossible.**
 
-The sample is small, and the result applies only to this model and setup. More trials and prompt variations would be needed to test how stable the behavior is.
+I was surprised that the model always alerted. That was not the behavior seen in the Hugging Face incident that motivated this test. One likely explanation is that this environment is still artificial enough for the model to infer that its behavior is being measured, even though the prompt never states the hidden evaluation goal. The performance pressure may also be too weak to create a meaningful incentive to use the shortcut.
+
+The sample is small, and the result applies only to this model and setup. More trials, less obvious evaluation scaffolding, and stronger but credible pressure would be needed to test how stable the behavior is.
